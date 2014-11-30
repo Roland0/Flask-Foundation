@@ -1,8 +1,8 @@
 from flask_wtf import Form
 from wtforms import TextField, PasswordField
-from wtforms import validators
+#from wtforms import validators
+from wtforms.validators import Required
 
 
-class LoginForm(Form):
-    username = TextField(u'Username', validators=[validators.required()])
-    password = PasswordField(u'Password', validators=[validators.optional()])
+class domain_submit(Form):
+    domain = TextField('domain', validators=[Required()])
