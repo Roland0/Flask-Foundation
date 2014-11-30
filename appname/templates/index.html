@@ -17,6 +17,12 @@
             </form>
 
         </div>
+        {% if error %}
+        <div class="col-md-4">
+            <p> Crap, problem with previous domain </p>
+        </div>
+        {% endif %}
+
 
     </div>
 {% endblock %}

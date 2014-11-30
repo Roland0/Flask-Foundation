@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+    <div class="jumbotron">
+        <h1>Acquia Domain validation checker</h1>
+        <p>For using with SSL certificate generation</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            {% if live %}
+            <p>{{ domain }} Is legit</p>
+            {% else %}
+            <p>{{ domain }} IS BS! </p>
+            {% endif %}
+        </div>
+
+    </div>
+{% endblock %}
