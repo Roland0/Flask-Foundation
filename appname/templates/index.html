@@ -4,22 +4,19 @@
 
 {% block body %}
     <div class="jumbotron">
-        <h1>Flask Foundation</h1>
-        <p>The unopinionated flask framework</p>
+        <h1>Acquia Domain validation checker</h1>
+        <p>For using with SSL certificate generation</p>
     </div>
     
     <div class="row">
         <div class="col-md-4">
-            <h3>Bootstrap</h3>
-            <p>Bootstrap is the most popular css framework on the internet and handles the hard parts of css so you don't have to.</p>
+            <form action="{{ url_for('.home') }}" method="POST" name="domain">
+                {{ form.hidden_tag() }}
+                <p>Enter Domain: </p> {{form.domain}}
+                <input type="submit" name="domain"/>
+            </form>
+
         </div>
-        <div class="col-md-4">
-            <h3>Flask Extensions</h3>
-            <p>Several flask extensions are included to handle the common tasks of web developers. The included extensions are flask-login, flask-assets, flask-WTF, flask-cache, flask-script, and flask-sqlalchemy.</p>
-        </div>
-        <div class="col-md-4">
-            <h3>Management Scripts</h3>
-            <p>Using the Makefile, you can easily setup your development environment with a few simple commands. With the power of flask-script you can create your own commands with the flask app context setup for you.</p>
-        </div>
+
     </div>
 {% endblock %}
